@@ -13,7 +13,9 @@ module.exports = withMDX({
   target: 'serverless',
 
   experimental: {
-    css: true
+    css: true,
+    granularChunks: true,
+    prefetchPreload: true
   },
 
   exportTrailingSlash: true,
