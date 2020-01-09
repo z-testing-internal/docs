@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { MDXProvider } from '@mdx-js/tag'
+import { MDXProvider } from '@mdx-js/react'
 import SectionContext from '~/components/api/section-context'
 import Heading from '../heading'
 import HR from '~/components/text/hr'

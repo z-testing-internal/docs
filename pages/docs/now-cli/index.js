@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { MDXProvider } from '@mdx-js/tag'
+import { MDXProvider } from '@mdx-js/react'
 import { withRouter } from 'next/router'
 import { useAmp } from 'next/amp'
 import debounce from 'lodash.debounce'
@@ -154,6 +154,8 @@ class NowCLIDocs extends Component {
             titleSuffix=" - ZEIT"
           />
 
+          <NowCLI />
+
           <DocsRuntime docs={<NowCLI />}>
             {({ structure }) => (
               <Main>
@@ -162,34 +164,6 @@ class NowCLIDocs extends Component {
                   innerRef={this.handleSidebarRef}
                   fixed
                 >
-                  {/* <div className="toggle-group-wrapper">
-                    <ToggleGroup>
-                      <ToggleItem
-                        active={
-                          router.pathname.startsWith('/docs') &&
-                          !router.pathname.startsWith('/docs/api')
-                        }
-                      >
-                        <Link prefetch href="/docs">
-                          <a onClick={this.handleIndexClick}>Docs</a>
-                        </Link>
-                      </ToggleItem>
-                      <ToggleItem
-                        active={router.pathname.startsWith('/docs/api')}
-                      >
-                        <Link prefetch href="/docs/api">
-                          <a onClick={this.handleIndexClick}>API Reference</a>
-                        </Link>
-                      </ToggleItem>
-                      <ToggleItem
-                        active={router.pathname.startsWith('/examples')}
-                      >
-                        <Link prefetch href="/examples">
-                          <a onClick={this.handleIndexClick}>Examples</a>
-                        </Link>
-                      </ToggleItem>
-                    </ToggleGroup>
-                  </div> */}
                   <DocsIndex
                     activeItem={active}
                     getHref={getHref}

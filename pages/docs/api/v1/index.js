@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { MDXProvider } from '@mdx-js/tag'
+import { MDXProvider } from '@mdx-js/react'
 import { withRouter } from 'next/router'
 import { useAmp } from 'next/amp'
 import { HEADER_HEIGHT } from '~/lib/constants'
