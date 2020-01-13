@@ -24,7 +24,6 @@ This section highlights two areas relating to pricing plans, **Usage Allowances*
   Execution time is calculated in units of 100ms. For example, 36ms will be
   billed as 100ms and 286ms will be billed as 300ms.
 </Note>
-
 <br />
 
 | Limit                  | Free | Pro | Business | Enterprise |
@@ -86,6 +85,12 @@ As a result of this, we recommend using a third-party service to enable email fu
 The maximum number of concurrent executions for a [Serverless Function](/docs/v2/serverless-functions/introduction/) is `1000`.
 
 If you require a limit above `1000`, you should [contact our enterprise department](mailto:sales@zeit.co) to discuss custom limits available on an enterprise plan.
+
+## Serverless Function Body size
+
+The maximum size for the body of a [Serverless Function](/docs/v2/serverless-functions/introduction/) is `6MB`.
+
+If a Serverless Function receives a payload in excess of `6MB` it will return an error - **413: FUNCTION_PAYLOAD_TOO_LARGE**.
 
 ## Reserved Variables
 
