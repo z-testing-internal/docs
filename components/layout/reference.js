@@ -11,7 +11,6 @@ import Main from '~/components/layout/main'
 import changeHash from '~/lib/utils/change-hash'
 import components from '~/lib/mdx-components'
 import Content from '~/components/layout/content'
-import VersionSwitcher from '~/components/layout/version-switcher'
 import Context from '~/lib/api/slugs-context'
 import DocsRuntime from '~/lib/api/runtime'
 import DocsIndex from '~/components/layout/index'
@@ -32,7 +31,6 @@ const debouncedChangeHash = debounce(changeHash, 200)
 function ReferencePage({
   router,
   Data,
-  versioned,
   title,
   description,
   defaultActiveCategory,
@@ -93,12 +91,6 @@ function ReferencePage({
     scrollToElement(sidebarNode, sectionNode)
   }
 
-  const handleVersionChange = event => {
-    const href = `/docs/api/${event.target.value}`
-    router.push(href)
-    handleIndexClick()
-  }
-
   const handleIndexClick = () => {
     if (navigationActive) {
       bodyLocker.unlock()
@@ -132,11 +124,7 @@ function ReferencePage({
         title={title || 'ZEIT Now Reference'}
         titlePrefix=""
         titleSuffix=" - ZEIT"
-      >
-        {versioned && version === 'v1' && (
-          <meta name="robots" content="noindex" />
-        )}
-      </Head>
+      />
 
       <DocsRuntime docs={Data}>
         {({ structure }) => (
@@ -185,14 +173,6 @@ function ReferencePage({
                 updateActive={updateActive}
                 setInitiallyActive={setInitiallyActive}
               />
-              {versioned && (
-                <div className="select-wrapper">
-                  <VersionSwitcher
-                    version={version}
-                    onChange={handleVersionChange}
-                  />
-                </div>
-              )}
             </Sidebar>
             <Content>
               <div className="content">

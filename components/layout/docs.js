@@ -19,7 +19,6 @@ import Note from '~/components/text/note'
 import { FooterFeedback } from '~/components/feedback-input'
 import Sidebar from '~/components/layout/sidebar'
 import DocsNavbarDesktop from '~/components/layout/navbar/desktop'
-import VersionSwitcher from '~/components/layout/version-switcher'
 import Main from '~/components/layout/main'
 
 const DocH1 = ({ children }) => (
@@ -123,20 +122,12 @@ function Doc({
           description={meta.description}
           image={meta.image}
           lastEdited={meta.lastEdited}
-        >
-          {version !== 'v2' && <meta name="robots" content="noindex" />}
-        </Head>
+        />
 
         <Main>
           <NonAmpOnly>
             <Sidebar active={navigationActive}>
               <DocsNavbarDesktop data={versionData} url={router} />
-              <div className="select-wrapper">
-                <VersionSwitcher
-                  version={version}
-                  onChange={handleVersionChange}
-                />
-              </div>
             </Sidebar>
           </NonAmpOnly>
 

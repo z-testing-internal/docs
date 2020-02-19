@@ -89,19 +89,6 @@ When properly configured, your `package.json` file would look similar to this:
 
 Once you have defined the `build` [script](https://docs.npmjs.com/misc/scripts), this error will disappear. Furthermore, it will not be displayed if you are using `package.json` purely to provide dependencies for your Serverless Functions located inside the `api` directory.
 
-## Platform Version Detection
-
-[Now CLI](/download) will automatically upgrade your deployment to the latest platform version if you create a new project or if your project meets certain criteria. In order for this to work, you must:
-
-- Remove any Dockerfile.
-- Remove the `type` property from your `now.json` file.
-- Remove the `start` script from your `package.json` file.
-- Remove the `server.js` file from the root of your project.
-
-It is possible to opt out of this behavior by creating a `now.json` file with a `version` property.
-
-If you are yet to upgrade to the latest platform version, please read our [upgrade guide](https://zeit.co/guides/migrate-to-zeit-now/).
-
 ## Green Energy Policy
 
 ZEIT works with multiple cloud partners in order to provide services to end users.
