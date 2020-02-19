@@ -19,7 +19,7 @@ export const meta = {
   name: 'TakeShape',
   type: 'site',
   editUrl: 'pages/guides/deploying-takeshape-with-zeit-now.mdx',
-  lastEdited: '2020-02-19T16:04:40.000Z'
+  lastEdited: '2020-02-19T16:06:42.000Z'
 }
 
 [TakeShape](https://www.takeshape.io/) provides instant, intuitive, adaptable, and collaborative services to power JAMstack projects of any size, shape, or complexity.
@@ -43,12 +43,14 @@ Set up a Next.js project by cloning the [project template](https://github.com/ta
 
 ## Step 3: Adding Your API Key as a Now Secret
 
-Using [Now CLI](/download), create [Now Secrets](/docs/v2/serverless-functions/env-and-secrets/) to securely store both the API key received in [Step 1](#step-1:creating-your-api-keys), along with the project `id`.
+Using [Now CLI](/download), create [Now Secrets](/docs/v2/serverless-functions/env-and-secrets/) to securely store both the API key received in [Step 1](#step-1:creating-your-api-keys), along with the project `id` from the TakeShape dashboard.
 
 <Snippet dark text="now secrets add TAKEHSAPE-API-KEY [your-takeshape-api-key]" />
 <Caption>
   Adding the <InlineCode>takeshape-api-key</InlineCode> as a <strong>Now Secret</strong>.
 </Caption>
+
+You can find your project `id` in the URL from the TakeShape dashboard, it will look similar to `a17a8efa-372e-4969-9267-55a9c35a0907`.
 
 <Snippet dark text="now secrets add TAKESHAPE-PROJECT [your-takeshape-project-id]" />
 <Caption>
