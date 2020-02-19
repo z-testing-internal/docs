@@ -129,21 +129,6 @@ module.exports = withMDX({
           destination: '/docs/v2/network/:path*'
         },
         {
-          source: '/docs/features/:path*',
-          permanent: true,
-          destination: '/docs/v1/features/:path*'
-        },
-        {
-          source: '/docs/static-deployments/:path*',
-          permanent: true,
-          destination: '/docs/v1/static-deployments/:path*'
-        },
-        {
-          source: '/docs/deployment-types/:path*',
-          permanent: true,
-          destination: '/docs/v1/deployment-types/:path*'
-        },
-        {
           source: '/docs/(|v1/)guides/updating-now-cli',
           permanent: true,
           destination: '/guides/updating-now-cli'
@@ -154,9 +139,9 @@ module.exports = withMDX({
           destination: '/guides'
         },
         {
-          source: '/docs/getting-started/:path*',
+          source: '/docs/getting-started/(.*)',
           permanent: true,
-          destination: '/docs/v1/getting-started/:path*'
+          destination: '/docs'
         },
         {
           source: '/docs/v2/getting-started/(.*)',
@@ -220,16 +205,6 @@ module.exports = withMDX({
           source: '/docs/v2/domains-and-aliases/cdn',
           permanent: true,
           destination: '/docs/v2/serverless-functions/edge-caching'
-        },
-        {
-          source: '/docs/other/:path*',
-          permanent: true,
-          destination: '/docs/v1/other/:path*'
-        },
-        {
-          source: '/docs/clients/:path*',
-          permanent: true,
-          destination: '/docs/v1/clients/:path*'
         },
         {
           source: '/examples/nodejs-express',
