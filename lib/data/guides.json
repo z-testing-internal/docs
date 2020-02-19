@@ -1,5 +1,17 @@
 [
   {
+    "title": "Create and Deploy a TakeShape Blog with ZEIT Now",
+    "description": "How to launch a blog site using Next.js and TakeShape on ZEIT Now in minutes.",
+    "published": "2020-02-19T12:00:00.860Z",
+    "authors": ["msweeneydev"],
+    "url": "/guides/deploying-takeshape-with-zeit-now",
+    "image": "https://og-image.now.sh/**Deploy%20a%20TakeShape%20Blog**%20%3Cbr%2F%3E%20with%20ZEIT%20Now.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fzeit-black-triangle.svg&images=https%3A%2F%2Fph-files.imgix.net%2F3799c380-ef0b-4ce0-946e-2731effd6fa4%3Fauto%3Dformat&widths=200&widths=350&heights=200&heights=350",
+    "name": "TakeShape",
+    "type": "site",
+    "editUrl": "pages/guides/deploying-takeshape-with-zeit-now.mdx",
+    "lastEdited": "2020-02-19T15:57:55.000Z"
+  },
+  {
     "title": "Create and Deploy Vue.js Forms using Formcarry with ZEIT Now",
     "description": "Create and deploy a project to recieve form submissions using Vue.js, Formcarry, and ZEIT Now.",
     "published": "2020-02-10T18:06:39.170Z",

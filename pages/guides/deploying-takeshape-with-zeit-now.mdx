@@ -1,0 +1,66 @@
+import Guide from '~/components/layout/guide'
+import Snippet from '~/components/snippet'
+import Caption from '~/components/text/caption'
+import Link from '~/components/text/link'
+import { Image } from '~/components/media'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+import DeploySection from '~/components/guides/deploy-section'
+
+export const meta = {
+  title: 'Create and Deploy a TakeShape Blog with ZEIT Now',
+  description:
+    'How to launch a blog site using Next.js and TakeShape on ZEIT Now in minutes.',
+  published: '2020-02-19T12:00:00.860Z',
+  authors: ['msweeneydev'],
+  url: '/guides/deploying-takeshape-with-zeit-now',
+  image:
+    'https://og-image.now.sh/**Deploy%20a%20TakeShape%20Blog**%20%3Cbr%2F%3E%20with%20ZEIT%20Now.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fzeit-black-triangle.svg&images=https%3A%2F%2Fph-files.imgix.net%2F3799c380-ef0b-4ce0-946e-2731effd6fa4%3Fauto%3Dformat&widths=200&widths=350&heights=200&heights=350',
+  name: 'TakeShape',
+  type: 'site',
+  editUrl: 'pages/guides/deploying-takeshape-with-zeit-now.mdx',
+  lastEdited: '2020-02-19T15:57:55.000Z'
+}
+
+[TakeShape](https://www.takeshape.io/) provides instant, intuitive, adaptable, and collaborative services to power JAMstack projects of any size, shape, or complexity.
+
+In this guide, you will discover how to create a [TakeShape blog](https://crystallize.now-examples.now.sh/), and deploy it with [ZEIT Now](/).
+
+## Step 1: Creating Your TakeShape Project
+
+Create a [TakeShape account](https://app.takeshape.io/signup). From the [TakeShape dashboard](https://app.takeshape.io/projects), create a new **Shape Blog** project.
+
+Once created, you will be taken to the project dashboard. Create an API key with **Read** permission. Make a note of this as it will not be shown again.
+
+With the API key created, you can move on to creating your Next.js blog that will use the data from the TakeShape project.
+
+## Step 2: Set Up Your Next.js Blog
+
+Set up a Next.js project by cloning the [project template](https://github.com/takeshape/takeshape-samples/tree/master/shape-blog-nextjs) and moving into the project directory:
+
+<Snippet dark text="git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-blog-nextjs" />
+<Caption>Initializing a Next.js + TakeShape project and moving into the project directory.</Caption>
+
+## Step 3: Adding Your API Key as a Now Secret
+
+Using [Now CLI](/download), create [Now Secrets](/docs/v2/serverless-functions/env-and-secrets/) to securely store both the API key received in [Step 1](#step-1:creating-your-api-keys), along with the project `id`.
+
+<Snippet dark text="now secrets add TAKEHSAPE-API-KEY [your-takeshape-api-key]" />
+<Caption>
+  Adding the <InlineCode>takeshape-api-key</InlineCode> as a <strong>Now Secret</strong>.
+</Caption>
+
+<Snippet dark text="now secrets add TAKESHAPE-PROJECT [your-takeshape-project-id]" />
+<Caption>
+  Adding the <InlineCode>takeshape-project</InlineCode> as a <strong>Now Secret</strong>.
+</Caption>
+
+## Step 4: Deploying Your Blog with ZEIT Now
+
+<DeploySection meta={meta} />
+
+export default ({ children }) => <Guide meta={meta}>{children}</Guide>
+
+export const config = {
+  amp: 'hybrid'
+}
