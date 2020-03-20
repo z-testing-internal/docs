@@ -3,10 +3,10 @@ import { Provider } from './collapse-context'
 
 const CollapseGroup = ({
   children,
-  hashToSection
+  hashToTitle
 }: {
   children: React.ReactNode
-  hashToSection?: Record<string, string>
+  hashToTitle?: Record<string, string>
 }) => {
   const [selected, setSelected] = useState('')
   const [initialScrollTarget, setInitialScrollTarget] = useState('')
@@ -16,9 +16,9 @@ const CollapseGroup = ({
 
   useEffect(() => {
     const hash = location.hash.substring(1)
-    if (hashToSection && hashToSection[hash]) {
-      setSelected(hashToSection[hash])
-      setInitialScrollTarget(hashToSection[hash])
+    if (hashToTitle && hashToTitle[hash]) {
+      setSelected(hashToTitle[hash])
+      setInitialScrollTarget(hashToTitle[hash])
     }
   }, [])
 
