@@ -10,7 +10,7 @@ function ErrorPage() {
     <>
       <Head
         titlePrefix=""
-        titleSuffix=" - ZEIT Documentation"
+        titleSuffix=" - dddZEIT Documentation"
         title="Page Not Found"
         description="The page that has been requested was not found."
       />
